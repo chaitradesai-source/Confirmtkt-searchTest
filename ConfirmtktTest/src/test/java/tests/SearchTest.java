@@ -20,7 +20,7 @@ public class SearchTest {
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         driver.get("https://www.confirmtkt.com/rbooking/");
-        System.out.println("browser opened hehe"); // junior-style message
+        System.out.println("browser opened here"); 
     }
 
     @Test
@@ -34,7 +34,7 @@ public class SearchTest {
             WebElement fromSuggestion = wait.until(ExpectedConditions.elementToBeClickable(
                     By.xpath("//li[contains(@class,'autocomplete') and contains(text(),'NDLS')]")));
             fromSuggestion.click();
-            System.out.println("from station done lol"); // naive message
+            System.out.println("from station done"); // 
 
             // typing to station
             WebElement toInput = wait.until(ExpectedConditions.elementToBeClickable(
@@ -44,24 +44,24 @@ public class SearchTest {
             WebElement toSuggestion = wait.until(ExpectedConditions.elementToBeClickable(
                     By.xpath("//li[contains(@class,'autocomplete') and contains(text(),'MMCT')]")));
             toSuggestion.click();
-            System.out.println("to station"); // casual message
+            System.out.println("to station"); // 
 
             // pick date
             WebElement firstDate = wait.until(ExpectedConditions.elementToBeClickable(
                     By.cssSelector("td.available")));
             firstDate.click();
-            System.out.println("date picked"); // very junior-style
+            System.out.println("date picked"); // 
 
             // click search
             WebElement searchBtn = wait.until(ExpectedConditions.elementToBeClickable(
                     By.xpath("//button[contains(text(),'Search')]")));
             searchBtn.click();
-            System.out.println("clicked search"); // naive message
+            System.out.println("clicked search"); // 
 
-            System.out.println("test finished!"); // casual end message
+            System.out.println("test finished!"); //  end message
 
         } catch (Exception e) {
-            System.out.println("oops !!, something went wrong: " + e.getMessage()); // casual failure message
+            System.out.println("oops !!, something went wrong: " + e.getMessage()); //  failure message
             e.printStackTrace();
         }
     }
@@ -72,3 +72,4 @@ public class SearchTest {
         System.out.println("browser closed"); // closing message
     }
 }
+
