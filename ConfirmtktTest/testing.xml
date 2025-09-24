@@ -1,0 +1,7 @@
+<suite name="ConfirmTktSearchSuite">
+    <test name="SearchTest">
+        <classes>
+            <class name="tests.SearchTest"/>
+        </classes>
+    </test>
+</suite>
